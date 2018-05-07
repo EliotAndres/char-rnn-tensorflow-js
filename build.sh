@@ -32,8 +32,4 @@ yarn
 
 echo Starting the example html/js server...
 # This uses port 1234 by default.
-node_modules/parcel-bundler/bin/cli.js build -d docs './' index.html
-
-# When the Parcel server exits, kill the http-server too.
-kill $HTTP_SERVER_PID
-
+node_modules/parcel-bundler/bin/cli.js build -d docs --public-url ./ index.html
