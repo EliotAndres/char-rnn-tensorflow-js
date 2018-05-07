@@ -31,11 +31,11 @@ RESOURCE_PORT=1235
 yarn
 
 echo Starting the pretrained model server...
-node_modules/http-server/bin/http-server dist --cors -p "${RESOURCE_PORT}" > /dev/null & HTTP_SERVER_PID=$!
+node_modules/http-server/bin/http-server docs --cors -p "${RESOURCE_PORT}" > /dev/null & HTTP_SERVER_PID=$!
 
 echo Starting the example html/js server...
 # This uses port 1234 by default.
-node_modules/parcel-bundler/bin/cli.js serve -d dist --open --no-hmr --public-url / index.html
+node_modules/parcel-bundler/bin/cli.js serve -d docs --open --no-hmr --public-url / index.html
 
 # When the Parcel server exits, kill the http-server too.
 kill $HTTP_SERVER_PID

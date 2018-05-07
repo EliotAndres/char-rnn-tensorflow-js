@@ -21,8 +21,8 @@ import * as ui from './ui';
 import SJS  from 'discrete-sampling'
 
 const LOCAL_URLS = {
-    model: 'http://localhost:1235/resources/model.json',
-    metadata: 'http://localhost:1235/resources/metadata.json'
+    model: './resources/model.json',
+    metadata: './resources/metadata.json'
 };
 
 class SentimentPredictor {
